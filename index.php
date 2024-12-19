@@ -21,7 +21,7 @@ if ($conn->connect_error) {
 echo "Connected successfully!";
 
 // Test a query
-$sql = "SELECT * FROM your_table_name LIMIT 10";
+$sql = "SELECT * FROM pageinfo LIMIT 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
