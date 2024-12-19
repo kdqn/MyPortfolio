@@ -49,7 +49,7 @@
                     echo "<td>{$projects['content']}</td>";
                     echo "<td>{$projects['languages']}</td>";
                     echo "<td>{$projects['link']}</td>";
-                    echo "<td><a href='" .  URL_ROOT . "/scripts/edit.php?id={$projects['id']}'>Edit</a> | <a href='" .  URL_ROOT . "/scripts/delete.php?id={$projects['id']}' onclick='return confirm(\"Are you sure you want to delete this project?\");'>Delete</a></td>";
+                    echo "<td><a href='" .  URL_ROOT . "../scripts/edit.php?id={$projects['id']}'>Edit</a> | <a href='" .  URL_ROOT . "../scripts/delete.php?id={$projects['id']}' onclick='return confirm(\"Are you sure you want to delete this project?\");'>Delete</a></td>";
                     echo "</tr>";
                 }
             }
