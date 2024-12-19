@@ -2,13 +2,17 @@
 
 echo "<h1>Page in progress</h1>";
 echo "<p>currently testing databases to migrate portfolio, come back soon</p>";
-// Database credentials
-$servername = "localhost";
-$username = "branqspi_kdqn";
-$password = "CMO4mysql!";
-$dbname = "branqspi_portfolio";
+
+$config = parse_ini_file('config.ini', true);
+
+// Database credentials from config file
+$host = $config['database']['host'];
+$user = $config['database']['user'];
+$pass = $config['database']['pass'];
+$name = $config['database']['name'];
+
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $user, $pass, $name);
 
 // Check connection
 if ($conn->connect_error) {
