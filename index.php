@@ -6,10 +6,10 @@ echo "<p>currently testing databases to migrate portfolio, come back soon</p>";
 $config = parse_ini_file('config.ini', true);
 
 // Database credentials from config file
-$host = $config['database']['host'];
-$user = $config['database']['user'];
-$pass = $config['database']['pass'];
-$name = $config['database']['name'];
+$host = $config['ENVIRONMENT']['host'];
+$user = $config['ENVIRONMENT']['user'];
+$pass = $config['ENVIRONMENT']['pass'];
+$name = $config['ENVIRONMENT']['name'];
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $name);
