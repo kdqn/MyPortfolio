@@ -1,5 +1,4 @@
 <?php
-phpinfo();
 
 $servername = "162.0.209.84";
 $username = "branqspi_kdqn";
