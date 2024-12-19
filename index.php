@@ -4,12 +4,12 @@ echo "<h1>Page in progress</h1>";
 echo "<p>currently testing databases to migrate portfolio, come back soon</p>";
 
 $config = parse_ini_file('config.ini', true);
-
+$environment = $config['ENVIRONMENT'];
 // Database credentials from config file
-$host = $config['ENVIRONMENT']['host'];
-$user = $config['ENVIRONMENT']['user'];
-$pass = $config['ENVIRONMENT']['pass'];
-$name = $config['ENVIRONMENT']['name'];
+$user = $config[$environment]['user'];
+$pass = $config[$environment]['pass'];
+$host = $config[$environment]['host'];
+$name = $config[$environment]['name'];
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $name);
