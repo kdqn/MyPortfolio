@@ -1,36 +1,34 @@
 <?php
-
-echo "<h1>Page in progress</h1>";
-echo "<p>currently testing databases to migrate portfolio, come back soon</p>";
-
 $config = parse_ini_file('config.ini', true);
 $environment = $config['ENVIRONMENT'];
-// Database credentials from config file
+$URL_BASE = $config[$environment]['root'];
+define('URL_ROOT', "$URL_BASE");
+define('APP_ROOT', dirname(__FILE__,1));
+include_once(APP_ROOT . '/services/database.controller.php');
+
+//Pull database credentials from config.ini
 $user = $config[$environment]['user'];
 $pass = $config[$environment]['pass'];
 $host = $config[$environment]['host'];
 $name = $config[$environment]['name'];
 
-// Create connection
-$conn = new mysqli($host, $user, $pass, $name);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully!";
-
-// Test a query
-$sql = "SELECT * FROM pageinfo LIMIT 10";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "ID: " . $row["id"] . " - Name: " . $row["name"] . "<br>";
-    }
-} else {
-    echo "No results found.";
+try
+{
+	$conn = new PDO("mysql:host=$host;dbname=$name", $user, $pass);
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $database = new DatabaseService($conn);
+} 
+catch(PDOException $e)
+{
+	echo "Connection failed: " . $e->getMessage();
 }
 
-$conn->close();
+if (isset($database))
+{
+  $controller = new DatabaseController($database);
+  $controller->indexPage('Home');
+  // include_once(APP_ROOT . '/scripts/API.php');
+  include_once(APP_ROOT . '/views/footer.view.php');
+}
+$conn = null;
 ?>
