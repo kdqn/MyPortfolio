@@ -20,7 +20,7 @@ $nav = [
   'nav' => [
   [
   'linktitle' => 'Home', 
-  'linkname' => URL_ROOT . 'index.php'
+  'linkname' => URL_ROOT . '/index.php'
   ],
   [
   'linktitle' => 'About', 
