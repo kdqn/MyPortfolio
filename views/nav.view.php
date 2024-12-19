@@ -24,27 +24,27 @@ $nav = [
   ],
   [
   'linktitle' => 'About', 
-  'linkname' => URL_ROOT . '/pages/about.php'
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/about.php'
   ],
   [
   'linktitle' => 'Projects',
-  'linkname' => URL_ROOT . '/pages/projects.php',
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/projects.php',
   ],
   [
   'linktitle' => 'Resume',
-  'linkname' => URL_ROOT . '/pages/resume.pdf',
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/resume.pdf',
   ],
   [
   'linktitle' => 'Experience',
-  'linkname' => URL_ROOT . '/pagse/experience.php',
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/experience.php',
   ],
   [
   'linktitle' => 'Contact',
-  'linkname' => URL_ROOT . '/pages/contact.php',
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/contact.php',
   ],
   [
   'linktitle' => 'Login',
-  'linkname' => URL_ROOT . '/pages/login.php',
+  'linkname' => URL_ROOT . 'MyPortfolio/pages/login.php',
   ],
   ]
 
