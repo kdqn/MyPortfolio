@@ -32,7 +32,7 @@ $nav = [
   ],
   [
   'linktitle' => 'Resume',
-  'linkname' => URL_ROOT . '/pages/resume.pdf',
+  'linkname' => URL_ROOT . '/pages/resume.php',
   ],
   [
   'linktitle' => 'Experience',
