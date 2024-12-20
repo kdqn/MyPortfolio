@@ -91,6 +91,7 @@ body {
     color: rgb(160, 157, 157);
     background-color: var(--pagebkg);
     margin-right: 180px;
+    z-index: 0;
     /* background: linear-gradient(360deg, #1cc7d0, #2ede98); */
     /* margin-left: 30px; */
 }
