@@ -135,7 +135,7 @@ h2:hover::before {
 
 h2::after {
     content: "";
-    height: 4px;
+    height: 5px;
     width: 0;
     position: absolute;
     top: 45%;
