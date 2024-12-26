@@ -58,7 +58,7 @@
            $deleteUrl = URL_ROOT . "/scripts/delete.php?id=" . $projects['id'];
         
             echo "<td>
-                <a href=\"" . htmlspecialchars($editUrl) . "\">Edit</a> | 
+                <a href=\"" . htmlspecialchars($editUrl) . "\">Edit Page</a> | 
                 <a href=\"" . htmlspecialchars($deleteUrl) . "\" 
                    onclick=\"return confirm('Are you sure you want to delete this project?');\">Delete</a>
             </td>";
