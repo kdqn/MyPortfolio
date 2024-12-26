@@ -58,7 +58,7 @@ table,th, td{
 footer {
     color: var(--textcolor);
     height: 60px;
-    width: 100%;
+    width: 140%;
     bottom: 0;
     margin-bottom: 0;
     padding-bottom: 0;
