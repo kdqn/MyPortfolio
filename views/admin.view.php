@@ -53,11 +53,12 @@
                     var_dump(URL_ROOT, $projects['id']);
 
 // Generate links
-                    echo "<td>
-                    <a href='" . htmlspecialchars(URL_ROOT) . "/scripts/edit.php?id=" . htmlspecialchars($projects['id']) . "'>Edit</a> | 
-                    <a href='" . htmlspecialchars(URL_ROOT) . "/scripts/delete.php?id=" . htmlspecialchars($projects['id']) . "' 
-                    onclick=\"return confirm('Are you sure you want to delete this project?');\">Delete</a>
-                    </td>";
+        echo "<td>
+            <a href='" . htmlspecialchars(URL_ROOT . "/scripts/edit.php?id=" . $projects['id']) . "'>Edit</a> | 
+            <a href='" . htmlspecialchars(URL_ROOT . "/scripts/delete.php?id=" . $projects['id']) . "' 
+            onclick=\"return confirm('Are you sure you want to delete this project?');\">Delete</a>
+        </td>";
+
 
                     echo "</tr>";
                 }
