@@ -53,11 +53,18 @@
                     var_dump(URL_ROOT, $projects['id']);
 
 // Generate links
-        echo "<td>
-            <a href='" . htmlspecialchars(URL_ROOT . "/scripts/edit.php?id=" . $projects['id']) . "'>Edit</a> | 
-            <a href='" . htmlspecialchars(URL_ROOT . "/scripts/delete.php?id=" . $projects['id']) . "' 
-            onclick=\"return confirm('Are you sure you want to delete this project?');\">Delete</a>
-        </td>";
+        if (defined('URL_ROOT') && !empty($projects['id'])) {
+           $editUrl = URL_ROOT . "/scripts/edit.php?id=" . $projects['id'];
+           $deleteUrl = URL_ROOT . "/scripts/delete.php?id=" . $projects['id'];
+        
+            echo "<td>
+                <a href=\"" . htmlspecialchars($editUrl) . "\">Edit</a> | 
+                <a href=\"" . htmlspecialchars($deleteUrl) . "\" 
+                   onclick=\"return confirm('Are you sure you want to delete this project?');\">Delete</a>
+            </td>";
+} else {
+    echo "<td>Error: URL or Project ID is not defined</td>";
+}
 
 
                     echo "</tr>";
