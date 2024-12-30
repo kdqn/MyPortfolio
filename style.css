@@ -128,6 +128,7 @@ h2::before {
     overflow: hidden;
     transition: all 300ms ease;
     padding-left: 20px;
+    display: none;
 }
 
 h2:hover::before {
