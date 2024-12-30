@@ -135,6 +135,7 @@ h2:hover::before {
     top: -2px;
     left: 0px;    
     color: var(--secondary);
+    display: block;
 }
 
 h2::after {
