@@ -5,11 +5,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(0, 0, 0);
     --accentcolor: rgb(208, 19, 114);
-    --primary: rgb(1, 77, 112);
-    --secondary: rgba(88, 201, 177, 0.864);
+    --primary: #6E8AA8;
+    --secondary: #888c96;
     --textcolor: rgb(28, 28, 28);
     --tablebkg: rgba(22, 83, 100, 0.541);
-    --pagebkg: rgb(255, 255, 255);
+    --pagebkg: #fafafa;
     --imgborder: rgb(231, 143, 27);
 }
 
