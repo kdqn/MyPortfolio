@@ -3,13 +3,13 @@
     padding: 0;
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(0, 0, 0);
-    --accentcolor: rgb(240, 156, 78);
+    color: #222835;
+    --accentcolor: #71A1D0;
     --primary: #294264;
     --secondary: #142f50;
-    --textcolor: rgb(28, 28, 28);
+    --textcolor: #222835;
     --tablebkg: rgba(74, 137, 173, 0.541);
-    --pagebkg: #96a6b1;
+    --pagebkg: #E1E0DA;
     --imgborder: rgb(255, 145, 0);
 }
 
