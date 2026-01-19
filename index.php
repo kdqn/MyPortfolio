@@ -1,5 +1,5 @@
 <?php
-$config = parse_ini_file('config.ini', true);
+$config = parse_ini_file(__DIR__ . '/config.ini', true);
 $environment = $config['ENVIRONMENT'];
 $URL_BASE = $config[$environment]['root'];
 define('URL_ROOT', "$URL_BASE");
