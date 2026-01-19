@@ -53,28 +53,21 @@ $nav = [
 
 ?>
 
+<input type="checkbox" id="active" />
+<label for="active" class="menu-btn"><span></span></label>
 
-      <!-- test hamburger menu -->
-      <input type="checkbox" id="active">
-    <label for="active" class="menu-btn"><span></span></label>
-    <label for="active" class="close"></label>
-    <div class="wrapper">
-      <!-- /////// -->
-
-<!-- test slash nav hover -->
-
-  <ul class="wrapper">
-  <?php
+<div class="wrapper">
+    <ul>
+        <?php
         for ($i = 0; $i < count($nav['nav']); $i++) {
-          echo "<li>";
-            echo "<a href=\"" . $nav['nav'][$i]['linkname'] . "\"><h2 data-name=\"" . $nav['nav'][$i]['linktitle'] . "\">" . $nav['nav'][$i]['linktitle'] . "</h2></li></a>";
+            echo '<li><a href="' . $nav['nav'][$i]['linkname'] . '">';
+            echo '<h2 data-name="' . $nav['nav'][$i]['linktitle'] . '">' . $nav['nav'][$i]['linktitle'] . '</h2>';
+            echo '</a></li>';
         }
-?>
-  </ul>
+        ?>
+    </ul>
+</div>
 
-<!-- end that test -->
-<!-- /////////// -->
-  </div>
 
 
 
