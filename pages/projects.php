@@ -23,14 +23,14 @@ catch(PDOException $e)
 	echo "Connection failed: " . $e->getMessage();
 }
 
-if (isset($database))
-{
-  $controller = new DatabaseController($database);
-  echo "<div>";
-  $controller->indexPage('Projects');
-  echo "</div>";
-  include_once(APP_ROOT . '/views/footer.view.php');
+if (isset($database)) {
+    $controller = new DatabaseController($database);
 
+    $controller->indexPage('Projects');  // Includes main.view.php for each project
+
+
+    include_once(APP_ROOT . '/views/footer.view.php');
 }
+
 $conn = null;
 ?>

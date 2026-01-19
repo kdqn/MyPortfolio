@@ -1,9 +1,12 @@
+<div class="project-card">
+    <h3><?php echo isset($article['title']) ? $article['title'] : ''; ?></h3>
+    <p><?php echo isset($article['content']) ? $article['content'] : ''; ?></p>
 
+    <?php if (!empty($article['languages'])): ?>
+        <p><strong>Languages/Tech:</strong> <?php echo $article['languages']; ?></p>
+    <?php endif; ?>
 
-
-<h3><?php echo (isset($article['title'])) ? $article['title'] : null; ?></h3>
-<p><?php echo (isset($article['content'])) ? $article['content'] : null;?></p>
-<p><?php echo (isset($article['languages'])) ? $article['languages'] : null;?></p>
-<a href="<?php echo (isset($article['link'])) ? $article['link'] : null;?>">
-    <?php echo (isset($article['link'])) ? 'See More' : null;?>
-</a>
+    <?php if (!empty($article['link'])): ?>
+        <a href="<?php echo $article['link']; ?>" target="_blank">See More</a>
+    <?php endif; ?>
+</div>
