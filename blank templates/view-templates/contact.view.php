@@ -17,7 +17,7 @@
 
     <div class="col">
       <div class="form-group">
-        <label>Phone</label>
+        <label>Phone #</label>
         <input type="text">
       </div>
     </div>
